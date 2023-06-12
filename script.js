@@ -11,8 +11,19 @@ function saveToLocalStorage(e){
     
 
     var password= document.getElementById('exampleInputPassword1').value;
+
+    let myobj= {
+        email: emailId,
+        password: password
+    };
+
+    let myobj_string= JSON.stringify(myobj);
+
+    
     
 
-    localStorage.setItem('email',emailId);
-    localStorage.setItem('password',password);
+    localStorage.setItem('myobj',myobj_string);
+    
+
+    
 }
